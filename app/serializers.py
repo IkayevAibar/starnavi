@@ -2,10 +2,20 @@ from rest_framework import serializers
 from .models import Post, Like
 from django.contrib.auth.models import User
 
-class UserSerializer(serializers.ModelSerializer):
+class UserRetrieveSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username','email']
+        exclude = ("password",)
+
+class UserListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id','username','email']
+
+class UserActivitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id','username','last_login','last_request']
 
 
 class PostRetrieveSerializer(serializers.ModelSerializer):

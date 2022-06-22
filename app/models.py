@@ -28,3 +28,10 @@ class Like(models.Model):
     user = models.ForeignKey(User, verbose_name="User", on_delete=models.CASCADE)
     created_at = models.DateTimeField("liked date", default=datetime.now)
 
+# class User_Activity(models.Model):
+#     user = models.ForeignKey(User, verbose_name="User", on_delete=models.CASCADE)
+#     last_request = models.DateTimeField("Last request made by user", null=True, blank=True)
+#     last_login = models.DateTimeField("Last user login time", null=True, blank=True)
+
+User.add_to_class('last_request', models.DateTimeField("Last request made by user", null=True, blank=True))
+
