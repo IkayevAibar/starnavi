@@ -30,7 +30,9 @@ Basic models:
 Basic Features:
 
 ● user signup -> POST request to /api/users/ or /auth/users/ with form in body username and password
+
 ● user login  -> POST request to /api/token/ with data in body [username, password] and you get a refresh and access tokens
+
 ● post creation -> POST request to /api/posts/ with data 
   [
     text,  text field 5000 max char
@@ -39,12 +41,15 @@ Basic Features:
     author,  id of user
     parent_post id of post or u can don't write this parameter if new post is not part of brench
   ]
+ 
 ● post like -> POST request to /api/likes/ with data 
   [
     user -> id of user
     post -> id of post 
   ]
+ 
 ● post unlike -> DELETE method to /api/likes/<like_id>
+
 ● analytics about how many likes was made. Example url
 /api/analitics/?date_from=2020-02-02&date_to=2020-02-15 . API should return analytics
 aggregated by day.
