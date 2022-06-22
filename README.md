@@ -88,4 +88,9 @@ mades a last request to the service.
  Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1OTEyOTkzLCJqdGkiOiJiZGQ5ZWQ4ZTE0ZTE0YTllYmExMTAzMTMwYjljNjFkZiIsInVzZXJfaWQiOjF9.ChuD-xKTrE8mahv7HrpFxVahWVwZWIFnA0phekISuug
 ```
 
+## all possible endpoints are possible at
+```
+ /swagger/
+```
+
 # Thank you for your attention :D
