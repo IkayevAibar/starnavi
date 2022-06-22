@@ -26,5 +26,5 @@ class Post(models.Model):
 class Like(models.Model):
     post = models.ForeignKey(Post, verbose_name="Post", on_delete=models.CASCADE)
     user = models.ForeignKey(User, verbose_name="User", on_delete=models.CASCADE)
-    datetime = models.DateTimeField("liked date", default=datetime.now)
+    created_at = models.DateTimeField("liked date", default=datetime.now)
 
