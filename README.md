@@ -31,7 +31,7 @@ and try to run it :D
 
 ### ● user signup
 ```
- POST request to /api/users/ or /auth/users/ with form in body username and password
+ POST request to /api/users/ or /auth/users/ with data in body [username, password]
 ```
 ### ● user login
 ```
