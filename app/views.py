@@ -30,13 +30,16 @@ def last_activity_trigger(user):
     user.last_request = datetime.datetime.now()
     user.save(update_fields=['last_request'])
     return
+class UnauthenticatedPost(permissions.BasePermission):
+    def has_permission(self, request, view):
+        return request.method in ['POST']
 
 class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
     queryset = User.objects.all().order_by('-date_joined')
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated|UnauthenticatedPost]
     
     def get_serializer_class(self):
         if self.action == 'retrieve':
