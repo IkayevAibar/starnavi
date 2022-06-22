@@ -39,7 +39,7 @@ and try to run it :D
 ```
 ### ● post creation
 ```
-POST request to /api/posts/ with data 
+ POST request to /api/posts/ with data 
 
    [
     text -> text field 5000 max char
@@ -50,8 +50,9 @@ POST request to /api/posts/ with data
    ]
 ```
  
-### ● post like -> POST request to /api/likes/ with data 
+### ● post like
 ```
+ POST request to /api/likes/ with data 
   [
     user -> id of user
     post -> id of post 
@@ -60,31 +61,31 @@ POST request to /api/posts/ with data
  
 ### ● post unlike
 ```
-DELETE method to /api/likes/<like_id>
+ DELETE method to /api/likes/<like_id>
 ```
 
 ### ● analytics about how many likes was made. API should return analytics aggregated by day.
 ```
-GET request to /api/analytics/?date_from=<date_from>&date_to=<date_to>
+ GET request to /api/analytics/?date_from=<date_from>&date_to=<date_to>
 ```
 
 ### ● user activity an endpoint which will show when user was login last time and when he
 mades a last request to the service.
 
 ```
-GET request to /api/users/<user_id>/activity/
+ GET request to /api/users/<user_id>/activity/
 ```
 
 #### additionaly i added:
 
 ```
-GET request to /api/posts/<post_id>/likes/ gives u all likes to current post with post_id
+ GET request to /api/posts/<post_id>/likes/ gives u all likes to current post with post_id
 ```
 
 ## all requests except post request to create user need jwt token in header that looks like:
 
 ```
-Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1OTEyOTkzLCJqdGkiOiJiZGQ5ZWQ4ZTE0ZTE0YTllYmExMTAzMTMwYjljNjFkZiIsInVzZXJfaWQiOjF9.ChuD-xKTrE8mahv7HrpFxVahWVwZWIFnA0phekISuug
+ Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU1OTEyOTkzLCJqdGkiOiJiZGQ5ZWQ4ZTE0ZTE0YTllYmExMTAzMTMwYjljNjFkZiIsInVzZXJfaWQiOjF9.ChuD-xKTrE8mahv7HrpFxVahWVwZWIFnA0phekISuug
 ```
 
 # Thank you for your attention :D
