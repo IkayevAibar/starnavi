@@ -39,9 +39,9 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
     
     def get_serializer_class(self):
-            if self.action == 'retrieve':
-                return UserRetrieveSerializer
-            return UserListSerializer
+        if self.action == 'retrieve':
+            return UserRetrieveSerializer
+        return UserListSerializer
     
     def get_queryset(self):
         last_activity_trigger(self.request.user)
